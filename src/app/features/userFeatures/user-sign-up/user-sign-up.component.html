@@ -1,13 +1,41 @@
-<div class="card">
+<!-- <div class="card">
     <form class="form">
         <span class="signup">Sign Up</span>
-        <input type="email" placeholder="Email address" class="form--input">
-        <input type="password" placeholder="Password" class="form--input">
-        <input type="password" placeholder="Confirm password" class="form--input">
+        <input type="text" name="userName" placeholder="User Name" class="form--input" [(ngModel)]="signUpObj.userName">
+        <input type="email" name="email" placeholder="Email address" class="form--input" [(ngModel)]="signUpObj.email">
+        <input type="password" name="password" placeholder="Password" class="form--input" [(ngModel)]="signUpObj.password">
+        <input type="password" placeholder="Confirm password" class="form--input" [(ngModel)]="signUpObj.vpassword">
 
 
-        <button class="form--submit">
+        <button (click)="onSignUp()" class="form--submit">
             Sign up
         </button>
     </form>
+</div> -->
+
+
+<div class="boody">
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" placeholder="User name" required="" [(ngModel)]="signupObj.Name">
+                <input type="email" name="email" placeholder="Email" required="" [(ngModel)]="signupObj.Email">
+                <input type="password" name="pswd" placeholder="Password" required="" [(ngModel)]="signupObj.Password">
+                <button (click)="doSignUp()">Sign up</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" required=""   [(ngModel)]="loginObj.Name">
+                <input type="password" name="pswd" placeholder="Password" required="" [(ngModel)]="loginObj.Password">
+                <button (click)="doLogin()">Login</button>
+            </form>
+        </div>
+    </div>
+
 </div>
